@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Login aselole</title>
+    </head>
+
+    <body>
+
+        <!-- Kontainer utama yang menampung semua elemen form -->
+        <div class="container" id="container">
+
+            <!-- Form untuk pendaftaran akun baru -->
+            <div class="form-container sign-up">
+                <form>
+                    <h1>Create Account</h1>
+                    <span>or use your email for registeration</span>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <input type="number" placeholder="Nomor Whatsapp">
+                    <div class="input-box">
+                        <input type="password" id="signup-password"
+                            placeholder="Password">
+                        <img src="eye-close.png" class="toggle-password"
+                            data-target="signup-password">
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="signup-confirm-password"
+                            placeholder="Konfirmasi Password">
+                        <img src="eye-close.png" class="toggle-password"
+                            data-target="signup-confirm-password">
+                    </div>
+                    <button id="btn-Go-login">Sign Up</button>
+                    <div class="signin-link">have an account? <a
+                            href="#" id="signin-link">Sign In</a></div>
+                </form>
+            </div>
+            <!-- Akhir Form untuk pendaftaran akun baru -->
+
+            <!-- Form untuk masuk atau login ke akun yang sudah ada -->
+            <div class="form-container sign-in">
+                <form>
+                    <h1>Sign In</h1>
+                    <span>or use your email password</span>
+                    <input type="email" placeholder="Email">
+                    <div class="input-box">
+                        <input type="password" id="signin-password"
+                            placeholder="Password">
+                        <img src="eye-close.png" class="toggle-password"
+                            data-target="signin-password">
+                    </div>
+                    <a href="#">Forget Your Password?</a>
+                    <button>Login</button>
+                    <div class="signup-link">don't have an account? <a
+                            href="#" id="signup-link">Sign Up</a></div>
+                </form>
+            </div>
+            <!-- Akhir Form untuk masuk atau login ke akun yang sudah ada -->
+
+            <!-- Kontainer untuk panel toggle yang memungkinkan pengguna berpindah antara form sign-up dan sign-in -->
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>Hello, Friend!</h1>
+                        <p>Register with your personal details to use all of
+                            site features</p>
+                        <button class="hidden" id="login">Login</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1>Welcome Back!</h1>
+                        <p>Enter your personal details to use all of site
+                            features</p>
+                        <button class="hidden" id="register">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Akhir Kontainer untuk panel toggle yang memungkinkan pengguna berpindah antara form sign-up dan sign-in -->
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
