@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Masuk & Daftar</title>
+    </head>
+
+    <body>
+        <!-- Kontainer utama yang menampung semua elemen form -->
+        <div class="container" id="container">
+            <!-- Form untuk pendaftaran akun baru -->
+            <div class="form-container sign-up">
+                <form>
+                    <div class="language-container-sign-up-2">
+                        <a href="../en/index.html"
+                            ><img
+                                src="assets/images/language-icon-black.svg"
+                                alt=""
+                                class="language-icon"
+                        /></a>
+                        <p>|</p>
+                        <p class="language-text">Indonesia</p>
+                    </div>
+                    <h1>Buat Akun</h1>
+                    <span>atau gunakan email Anda untuk registrasi</span>
+                    <input type="text" placeholder="Nama" />
+                    <input type="email" placeholder="Email" />
+                    <input type="number" placeholder="Nomor Whatsapp" />
+                    <div class="input-box">
+                        <input
+                            type="password"
+                            id="signup-password"
+                            placeholder="Kata Sandi"
+                        />
+                        <img
+                            src="assets/images/eye-close.png"
+                            class="toggle-password"
+                            data-target="signup-password"
+                        />
+                    </div>
+                    <div class="input-box">
+                        <input
+                            type="password"
+                            id="signup-confirm-password"
+                            placeholder="Konfirmasi Kata Sandi"
+                        />
+                        <img
+                            src="assets/images/eye-close.png"
+                            class="toggle-password"
+                            data-target="signup-confirm-password"
+                        />
+                    </div>
+                    <button id="btn-Go-login">Daftar</button>
+                    <div class="signin-link">
+                        punya akun?
+                        <a href="#" id="signin-link">Masuk</a>
+                    </div>
+                </form>
+            </div>
+            <!-- Akhir Form untuk pendaftaran akun baru -->
+
+            <!-- Form untuk masuk atau login ke akun yang sudah ada -->
+            <div class="form-container sign-in">
+                <form>
+                    <div class="language-container-sign-in">
+                        <a href="../en/index.html"
+                            ><img
+                                src="assets/images/language-icon-black.svg"
+                                alt=""
+                                class="language-icon"
+                        /></a>
+                        <p>|</p>
+                        <p class="language-text">Indonesia</p>
+                    </div>
+                    <h1>Masuk</h1>
+                    <span>atau gunakan email dan password Anda</span>
+                    <input type="email" placeholder="Email" />
+                    <div class="input-box">
+                        <input
+                            type="password"
+                            id="signin-password"
+                            placeholder="Kata Sandi"
+                        />
+                        <img
+                            src="assets/images/eye-close.png"
+                            class="toggle-password"
+                            data-target="signin-password"
+                        />
+                    </div>
+                    <a href="#">Lupa Kata Sandi Anda?</a>
+                    <button>Masuk</button>
+                    <div class="signup-link">
+                        tidak punya akun?
+                        <a href="#" id="signup-link">Daftar</a>
+                    </div>
+                </form>
+            </div>
+            <!-- Akhir Form untuk masuk atau login ke akun yang sudah ada -->
+
+            <!-- Kontainer untuk panel toggle yang memungkinkan pengguna berpindah antara form sign-up dan sign-in -->
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <div class="language-container-sign-up">
+                            <a href="../en/index.html"
+                                ><img
+                                    src="assets/images/language-icon-white.svg"
+                                    alt=""
+                                    class="language-icon"
+                            /></a>
+                            <p>|</p>
+                            <p class="language-text">Indonesia</p>
+                        </div>
+                        <h1>Halo, Teman!</h1>
+                        <p>
+                            Daftar dengan data pribadi Anda untuk menggunakan
+                            semua fitur situs
+                        </p>
+                        <button class="hidden" id="login">Login</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1>Selamat Datang Kembali!</h1>
+                        <p>
+                            Masukkan detail pribadi Anda untuk menggunakan semua
+                            fitur situs
+                        </p>
+                        <button class="hidden" id="register">Daftar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Akhir Kontainer untuk panel toggle yang memungkinkan pengguna berpindah antara form sign-up dan sign-in -->
+
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>
