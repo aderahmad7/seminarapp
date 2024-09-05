@@ -14,6 +14,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     padding: 20px;
+    overflow: hidden;
 }
 
 .container {
@@ -245,6 +246,12 @@ body {
     top: 0;
 }
 
+.language-container-sign-in a,
+.language-container-sign-up a,
+.language-container-sign-up-2 a {
+    margin: 0;
+}
+
 .language-container-sign-up {
     margin: 20px;
     position: absolute;
@@ -275,6 +282,10 @@ body {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+    body {
+        padding-top: 0;
+    }
+
     .container {
         min-height: 100vh;
         border-radius: 0;
