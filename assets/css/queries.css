@@ -1,0 +1,54 @@
+@media only screen and (max-width: 768px) {
+    .toggle-container {
+        display: none;
+    }
+    
+    .container-content {
+        width: 50% !important;
+    }
+
+    .form-container {
+        transform: translateX(0);
+        width: 100% !important;
+    }
+
+    .container-content.active .sign-in {
+        transform: translateX(-100%);
+    }
+    
+    .container-content.active .sign-up {
+        transform: translateX(0);
+        opacity: 1;
+        z-index: 5;
+        animation: move 0.6s;
+    }
+
+    .signin-link-container, .signup-link-container {
+        display: block !important;
+    }
+} 
+
+@media only screen and (max-width: 660px) {
+    .container-content {
+        width: 60% !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container-content {
+        width: 65% !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container-content {
+        width: 90% !important;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .container-content {
+        width: 100% !important;
+        min-height: 400px;
+    }
+}

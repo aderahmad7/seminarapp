@@ -10,6 +10,7 @@
             rel="stylesheet" />
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/queries.css">
         <title>Login & Register</title>
     </head>
     <body>
@@ -23,12 +24,12 @@
                     class="form-container sign-up position-absolute top-0 h-100 start-0 w-50">
                     <div
                         class="form-content bg-white d-flex align-items-center justify-content-center flex-column h-100">
-                        <h1 class="title fw-bold">Create Account</h1>
-                        <span class="sign-up-desc">or use your email for
-                            registration</span>
+                        <h1 class="title fw-bold" id="sign-up-title">Create Account</h1>
+                        
                         <form action method="post">
                             <input
                                 class="input border-0 w-100"
+                                id="signup-input-name"
                                 type="text"
                                 placeholder="Name"
                                 name="name" />
@@ -39,7 +40,8 @@
                                 name="email" />
                             <input
                                 class="input border-0 w-100"
-                                type="number"
+                                id="signup-input-whatsapp"
+                                type="text"
                                 placeholder="WhatsApp Number"
                                 name="whats-app-number" />
                             <div
@@ -73,18 +75,19 @@
                             <button
                                 type="submit"
                                 name="submit"
+                                id="signup-button"
                                 class="button-seminarapp text-white fw-bold text-uppercase w-100">
                                 Sign Up
                             </button>
                         </form>
-                        <!-- <div class="signin-link-container d-block mb-2">
-                            have an account?
+                        <div class="signin-link-container d-none mb-2">
+                            <span>have an account?</span>
                             <a
                                 href="#"
                                 class="signin-link fw-bold text-decoration-none mb-0"
                                 >Sign In</a
                             >
-                        </div> -->
+                        </div>
                     </div>
                 </div>
                 <!-- Form Sign Up End -->
@@ -95,16 +98,15 @@
                     <div
                         class="form-content bg-white d-flex align-items-center justify-content-center flex-column h-100">
                         <div
-                            class="language-container position-absolute top-0 start-0 p-3 d-flex align-items-center gap-2">
+                            class="language-container position-absolute top-0 start-0 p-4 d-flex align-items-center gap-2">
                             <p class="mb-0 language-title">EN</p>
                             <div class="language-toggle-btn position-relative"
                                 id="language-toggle-btn">
                             </div>
                             <p class="mb-0 language-title">ID</p>
                         </div>
-                        <h1 class="title fw-bold">Sign In</h1>
-                        <span class="sign-up-desc">or use your email and
-                            password</span>
+                        <h1 class="title fw-bold" id="sign-in-title">Sign In</h1>
+                        
                         <form action method="post" class="w-100">
                             <input
                                 class="input border-0 w-100"
@@ -128,19 +130,20 @@
                             <button
                                 type="submit"
                                 name="submit"
+                                id="signin-button"
                                 class="button-seminarapp text-white fw-bold text-uppercase w-100"
                                 id="btn-go-login">
-                                Sign Up
+                                Sign In
                             </button>
                         </form>
-                        <!-- <div class="signin-link-container d-block mb-2">
-                            have an account?
+                        <div class="signup-link-container mb-2 d-none text-center">
+                            <span>don't have an account?</span>
                             <a
                                 href="#"
-                                class="signin-link fw-bold text-decoration-none mb-0"
-                                >Sign In</a
+                                class="signup-link fw-bold text-decoration-none mb-0"
+                                >Sign Up</a
                             >
-                        </div> -->
+                        </div>
                     </div>
                 </div>
                 <!-- Form Sign In End -->
@@ -151,9 +154,9 @@
                     <div class="toggle text-white position-relative h-100">
                         <div
                             class="toggle-panel toggle-left position-absolute w-50 h-100 d-flex align-items-center justify-content-center flex-column text-center top-0">
-                            <h1 class="title fw-bold">Hello, Friend</h1>
+                            <h1 class="title fw-bold" id="toggle-signup-title">Hello, Friend</h1>
 
-                            <p class="toggle-detail">
+                            <p class="toggle-detail" id="toggle-signup-detail">
                                 Register with your personal details to use all
                                 of site features
                             </p>
@@ -165,9 +168,9 @@
                         </div>
                         <div
                             class="toggle-panel toggle-right position-absolute w-50 h-100 d-flex align-items-center justify-content-center flex-column text-center top-0 end-0">
-                            <h1 class="title fw-bold">Welcome Back!</h1>
+                            <h1 class="title fw-bold" id="toggle-signin-title">Welcome Back!</h1>
 
-                            <p class="toggle-detail">
+                            <p class="toggle-detail" id="toggle-signin-detail">
                                 Enter your personal details to use all of sites
                                 features
                             </p>

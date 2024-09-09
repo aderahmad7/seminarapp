@@ -94,7 +94,7 @@
     letter-spacing: 0.5px;
 }
 
-.signin-link {
+.signin-link, .signup-link {
     color: #512da8;
     font-size: 14px;
 }
