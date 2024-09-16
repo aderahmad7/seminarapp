@@ -5,9 +5,18 @@ const toggleIcons = document.querySelectorAll(".toggle-password");
 const btnLogin = document.getElementById("btn-go-login");
 const regusterBtn = document.getElementById("register");
 const loginBtn = document.getElementById("login");
-const languageToggleBtn = document.getElementById("language-toggle-btn");
+const languageToggleBtnSignIn = document.getElementById(
+    "language-toggle-btn-signin"
+);
+const languageToggleBtnSignUp = document.getElementById(
+    "language-toggle-btn-signup"
+);
 const signUpBtn = document.querySelector(".signup-link");
 const signInBtn = document.querySelector(".signin-link");
+const forgotPasswordBtn = document.querySelector(".forgot-password-link");
+const loginForgotPasswordBtn = document.querySelector(
+    ".signin-link-forgot-password"
+);
 
 // Text Language Element Sign Up
 const signUpTitle = document.getElementById("sign-up-title");
@@ -31,6 +40,11 @@ const toggleSignInTittle = document.getElementById("toggle-signin-title");
 const toggleSignInDetail = document.getElementById("toggle-signin-detail");
 const signInMobileBtn = document.querySelector(".signin-link");
 const signInMobileTitle = document.querySelector(".signin-link-container span");
+const rememberMe = document.getElementById('remember-me');
+
+// Text Language Forgot Password
+const forgotPassTitle = document.getElementById('forgot-password-title');
+const forgotPassBtn = document.getElementById('forgot-password-button');
 
 regusterBtn.addEventListener("click", function () {
     container.classList.add("active");
@@ -46,6 +60,18 @@ signInBtn.addEventListener("click", function () {
 
 loginBtn.addEventListener("click", function () {
     container.classList.remove("active");
+});
+
+forgotPasswordBtn.addEventListener("click", function () {
+    container.classList.add("forgot");
+});
+
+loginBtn.addEventListener("click", function () {
+    container.classList.remove("forgot");
+});
+
+loginForgotPasswordBtn.addEventListener("click", function () {
+    container.classList.remove("forgot");
 });
 
 // Menambahkan event listener untuk setiap ikon mata
@@ -79,6 +105,8 @@ const translations = {
             toggleButton: "Sign In",
             mobileTitle: "have an account?",
             mobileBtn: "Sign In",
+            forgotPassBtn: "Forgot Password?",
+            rememberMe: "Remember Me",
         },
         signUp: {
             title: "Sign Up",
@@ -94,6 +122,10 @@ const translations = {
             mobileTitle: "don't have an account?",
             mobileBtn: "Sign Up",
         },
+        forgotPass: {
+            title: "Forgot Password",
+            button: "Send",
+        }
     },
     id: {
         signIn: {
@@ -106,6 +138,8 @@ const translations = {
             toggleButton: "Masuk",
             mobileTitle: "punya akun?",
             mobileBtn: "Masuk",
+            forgotPassBtn: "Lupa Kata Sandi?",
+            rememberMe: "Ingat Saya",
         },
         signUp: {
             title: "Daftar",
@@ -121,6 +155,10 @@ const translations = {
             mobileTitle: "belum punya akun?",
             mobileBtn: "Daftar",
         },
+        forgotPass: {
+            title: "Lupa Kata Sandi",
+            button: "Kirim",
+        }
     },
 };
 
@@ -149,12 +187,33 @@ function changeLanguage(lang) {
     loginBtn.textContent = translations[lang].signIn.toggleButton;
     signInMobileTitle.textContent = translations[lang].signIn.mobileTitle;
     signInMobileBtn.textContent = translations[lang].signIn.mobileBtn;
+    forgotPasswordBtn.textContent = translations[lang].signIn.forgotPassBtn;
+    rememberMe.textContent = translations[lang].signIn.rememberMe;
+
+    // Forgot Password Language
+    forgotPassTitle.textContent = translations[lang].forgotPass.title;
+    forgotPassBtn.textContent = translations[lang].forgotPass.button;
+
 }
 
 // Change Language Action
-languageToggleBtn.addEventListener("click", function () {
-    languageToggleBtn.classList.toggle("active");
-    if (languageToggleBtn.classList.contains("active")) {
+languageToggleBtnSignIn.addEventListener("click", function () {
+    languageToggleBtnSignIn.classList.toggle("active");
+    languageToggleBtnSignUp.classList.toggle("active");
+    if (
+        languageToggleBtnSignIn.classList.contains("active") &&
+        languageToggleBtnSignUp.classList.contains("active")
+    ) {
+        changeLanguage("id");
+    } else {
+        changeLanguage("en");
+    }
+});
+
+languageToggleBtnSignUp.addEventListener("click", function () {
+    languageToggleBtnSignUp.classList.toggle("active");
+    languageToggleBtnSignIn.classList.toggle("active");
+    if (languageToggleBtnSignUp.classList.contains("active")) {
         changeLanguage("id");
     } else {
         changeLanguage("en");

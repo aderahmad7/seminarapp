@@ -19,13 +19,49 @@
             <div
                 class="container-content bg-white position-relative overflow-hidden w-100">
 
+                <!-- Forgot Password Start -->
+                <div
+                    class="form-container forgot-password position-absolute top-0 h-100 start-0 w-50">
+                    <div
+                        class="form-content bg-white d-flex align-items-center justify-content-center flex-column h-100">
+                        <h1 class="title fw-bold text-center"
+                            id="forgot-password-title">Forgot Password</h1>
+
+                        <form action method="post">
+                            <input
+                                class="input border-0 w-100"
+                                type="email"
+                                placeholder="Email"
+                                name="email" />
+                            <button
+                                type="submit"
+                                name="submit"
+                                id="forgot-password-button"
+                                class="button-seminarapp text-white fw-bold text-uppercase w-100">
+                                Send
+                            </button>
+                        </form>
+                        <div
+                            class="forgot-password-link-container mb-2 d-none text-center">
+                            <span>have an account?</span>
+                            <a
+                                href="#"
+                                class="signin-link-forgot-password fw-bold text-decoration-none mb-0">Sign
+                                In</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Forgot Password End -->
+
                 <!-- Form Sign Up Start -->
                 <div
                     class="form-container sign-up position-absolute top-0 h-100 start-0 w-50">
                     <div
                         class="form-content bg-white d-flex align-items-center justify-content-center flex-column h-100">
-                        <h1 class="title fw-bold" id="sign-up-title">Create Account</h1>
-                        
+
+                        <h1 class="title fw-bold" id="sign-up-title">Create
+                            Account</h1>
+
                         <form action method="post">
                             <input
                                 class="input border-0 w-100"
@@ -84,9 +120,8 @@
                             <span>have an account?</span>
                             <a
                                 href="#"
-                                class="signin-link fw-bold text-decoration-none mb-0"
-                                >Sign In</a
-                            >
+                                class="signin-link fw-bold text-decoration-none mb-0">Sign
+                                In</a>
                         </div>
                     </div>
                 </div>
@@ -101,12 +136,13 @@
                             class="language-container position-absolute top-0 start-0 p-4 d-flex align-items-center gap-2">
                             <p class="mb-0 language-title">EN</p>
                             <div class="language-toggle-btn position-relative"
-                                id="language-toggle-btn">
+                                id="language-toggle-btn-signin">
                             </div>
                             <p class="mb-0 language-title">ID</p>
                         </div>
-                        <h1 class="title fw-bold" id="sign-in-title">Sign In</h1>
-                        
+                        <h1 class="title fw-bold" id="sign-in-title">Sign
+                            In</h1>
+
                         <form action method="post" class="w-100">
                             <input
                                 class="input border-0 w-100"
@@ -127,6 +163,17 @@
                                     class="toggle-password position-absolute"
                                     data-target="signin-password" />
                             </div>
+                            <div
+                                class="d-flex align-items-center justify-content-between p-2">
+                                <div
+                                    class="remember-me-container d-flex align-items-center gap-1">
+                                    <input type="checkbox" id="remember">
+                                    <label for="remember" id="remember-me">Remember Me</label>
+                                </div>
+                                <button type="button"
+                                    class="forgot-password-link text-decoration-none bg-transparent border-0">Forgot
+                                    Password?</button>
+                            </div>
                             <button
                                 type="submit"
                                 name="submit"
@@ -136,13 +183,13 @@
                                 Sign In
                             </button>
                         </form>
-                        <div class="signup-link-container mb-2 d-none text-center">
+                        <div
+                            class="signup-link-container mb-2 d-none text-center">
                             <span>don't have an account?</span>
                             <a
                                 href="#"
-                                class="signup-link fw-bold text-decoration-none mb-0"
-                                >Sign Up</a
-                            >
+                                class="signup-link fw-bold text-decoration-none mb-0">Sign
+                                Up</a>
                         </div>
                     </div>
                 </div>
@@ -152,9 +199,20 @@
                 <div
                     class="toggle-container position-absolute top-0 start-50 w-50 h-100 overflow-hidden">
                     <div class="toggle text-white position-relative h-100">
+
                         <div
                             class="toggle-panel toggle-left position-absolute w-50 h-100 d-flex align-items-center justify-content-center flex-column text-center top-0">
-                            <h1 class="title fw-bold" id="toggle-signup-title">Hello, Friend</h1>
+                            <div
+                                class="language-container position-absolute top-0 start-0 p-4 d-flex align-items-center gap-2">
+                                <p class="mb-0 language-title">EN</p>
+                                <div
+                                    class="language-toggle-btn position-relative"
+                                    id="language-toggle-btn-signup">
+                                </div>
+                                <p class="mb-0 language-title">ID</p>
+                            </div>
+                            <h1 class="title fw-bold"
+                                id="toggle-signup-title">Hello, Friend</h1>
 
                             <p class="toggle-detail" id="toggle-signup-detail">
                                 Register with your personal details to use all
@@ -168,7 +226,8 @@
                         </div>
                         <div
                             class="toggle-panel toggle-right position-absolute w-50 h-100 d-flex align-items-center justify-content-center flex-column text-center top-0 end-0">
-                            <h1 class="title fw-bold" id="toggle-signin-title">Welcome Back!</h1>
+                            <h1 class="title fw-bold"
+                                id="toggle-signin-title">Welcome Back!</h1>
 
                             <p class="toggle-detail" id="toggle-signin-detail">
                                 Enter your personal details to use all of sites

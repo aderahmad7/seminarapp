@@ -22,6 +22,7 @@
 
 .container-content.active .sign-in {
     transform: translateX(100%);
+    /* z-index: 9999; */
 }
 
 .container-content.active .sign-up {
@@ -29,6 +30,25 @@
     opacity: 1;
     z-index: 5;
     animation: move 0.6s;
+}
+
+.container-content.forgot .forgot-password{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 7;
+    animation: move 0.6s;
+}
+
+.container-content.forgot .sign-in {
+    transform: translateX(100%);
+}
+
+.toggle-container .language-toggle-btn::after {
+    background-color: #512da8;
+}
+
+.toggle-container .language-toggle-btn.active {
+    background-color: #fff;
 }
 
 .form-container {
@@ -44,7 +64,7 @@
     50%,
     100% {
         opacity: 1;
-        z-index: 5;
+        z-index: 7;
     }
 }
 
@@ -53,8 +73,8 @@
 */
 
 .sign-up {
-    opacity: 1;
-    z-index: 1;
+    opacity: 0;
+    z-index: 2;
 }
 .form-content {
     padding: 0 40px;
@@ -94,7 +114,7 @@
     letter-spacing: 0.5px;
 }
 
-.signin-link, .signup-link {
+.signin-link, .signup-link, .signin-link-forgot-password {
     color: #512da8;
     font-size: 14px;
 }
@@ -106,7 +126,7 @@
 .toggle-container {
     transition: all 0.6s ease-in-out;
     border-radius: 150px 0 0 100px;
-    z-index: 9999;
+    z-index: 99;
 }
 
 .toggle {
@@ -131,6 +151,23 @@
 }
 
 .container-content.active .toggle-right {
+    transform: translateX(200%);
+}
+
+.container-content.forgot .toggle-container {
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.container-content.forgot .toggle {
+    transform: translateX(50%);
+}
+
+.container-content.forgot .toggle-left {
+    transform: translateX(0);
+}
+
+.container-content.forgot .toggle-right {
     transform: translateX(200%);
 }
 
@@ -165,7 +202,7 @@
 */
 
 .sign-in {
-    z-index: 2;
+    z-index: 3;
 }
 
 .language-toggle-btn {
@@ -200,4 +237,38 @@
 .language-title {
     font-size: 14px;
     font-weight: 600;
+}
+
+input[type="checkbox"] {
+    /* appearance: none; */
+    width: 15px;
+    height: 15px;
+    border: 2px solid #512da8;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+Change background when checked
+input[type="checkbox"]:checked {
+    background-color: #512da8 !important;
+}
+
+.remember-me-container label {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.forgot-password-link {
+    font-size: 12px;
+    color: #512da8;
+}
+
+/* 
+    Forgot Password Style
+*/
+
+.forgot-password {
+    opacity: 0;
+    z-index: 1;
 }
